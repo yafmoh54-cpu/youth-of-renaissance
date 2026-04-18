@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Georgia", serif;
+
+  --color-brand-primary: #121316; /* Deep Dark Background */
+  --color-brand-secondary: #c4a484; /* Muted Brass Accent */
+  --color-brand-accent: rgba(196, 164, 132, 0.3); /* Transparent Brass Accent */
+  --color-paper: #121316;
+  --color-card-bg: rgba(255, 255, 255, 0.03);
+  --color-card-border: rgba(255, 255, 255, 0.08);
+  --color-text-main: #e8e8e8;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-primary text-text-main font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+.accent-text {
+  @apply text-brand-secondary italic;
+  font-family: var(--font-serif);
+}
